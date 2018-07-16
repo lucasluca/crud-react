@@ -3,8 +3,10 @@ import "./App.css";
 import uuid from "uuid";
 import Project from "./components/Project";
 import AddProject from "./components/AddProject";
+import Increment from "./components/Increment";
+import DataBind from "./components/DataBind";
 
-class App extends Component {
+class App extends Component { 
   constructor() {
     super();
     this.state = {
@@ -68,6 +70,9 @@ class App extends Component {
           onDelete={this.handleDeleteProject.bind(this)}
           projects={this.state.projects}
         />
+        <br/>
+        <Increment />
+        <DataBind />
         {/* <Project lucas={"Ola Mundo"}/> Passando atributos para o componente */}
       </div>
     );
